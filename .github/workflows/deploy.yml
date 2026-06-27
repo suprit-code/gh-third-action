@@ -12,9 +12,9 @@ jobs:
     environment: testing
     runs-on: ubuntu-latest
     env :
-      MONGODB_CLUSTER_ADDRESS : cluster0.qq9qyqn.mongodb.net
-      MONGODB_USERNAME : supritnaik100_db_user
-      MONGODB_PASSWORD : OSYV8NFkG77sxmsc 
+      MONGODB_CLUSTER_ADDRESS : ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+      MONGODB_USERNAME : ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD : ${{ secrets.MONGODB_PASSWORD }}
     steps:
       - name: Get Code
         uses: actions/checkout@v7
