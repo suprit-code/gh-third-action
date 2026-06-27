@@ -31,11 +31,11 @@ jobs:
         run: npm test
       - name: Output information
         run: |
-          echo "ENVIRONMENT VARIABLES : ${{ env }}"
+          echo "ENVIRONMENT VARIABLES : ${{ toJSON(env) }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |        
-          echo "ENVIRONMENT VARIABLES: ${{ env }}"
+          echo "ENVIRONMENT VARIABLES: ${{ toJSON(env) }}"
